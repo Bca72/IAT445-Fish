@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class SimpleLocomotion : MonoBehaviour
 {
-    public float moveSpeed = 1.0f;  // Editable speed variable in the Inspector
-    public Transform cameraTransform;  // Reference to the VR headset (camera)
+    public float moveSpeed = 2.0f;
+    public float minSpeed = 0.1f;
+    public float slowingDistance = 2.0f;
+    public float stopDistance = 0.05f;
+    public Transform cameraTransform;
+    public LayerMask boundaryLayer;
+
+    private float currentSpeed;
 
     private void Update()
     {
@@ -14,13 +20,43 @@ public class SimpleLocomotion : MonoBehaviour
 
     private void MovePlayer()
     {
-        // Get the forward direction of the camera, ignoring the vertical component
         Vector3 forward = cameraTransform.forward;
-        forward.y = 0;  // Keep movement on the horizontal plane
         forward.Normalize();
 
-        // Apply movement
-        transform.position += forward * moveSpeed * Time.deltaTime;
+        if (IsApproachingBoundary(forward, out float distance))
+        {
+            if (distance <= stopDistance)
+            {
+                currentSpeed = 0;
+                Debug.Log("Stopped at boundary.");
+            }
+            else
+            {
+                float slowFactor = Mathf.Clamp01(distance / slowingDistance);
+                currentSpeed = Mathf.Lerp(minSpeed, moveSpeed, slowFactor);
+                Debug.Log($"Slowing down. Distance: {distance}, Speed: {currentSpeed}");
+            }
+        }
+        else
+        {
+            currentSpeed = moveSpeed;
+        }
+
+        transform.position += forward * currentSpeed * Time.deltaTime;
+    }
+
+    private bool IsApproachingBoundary(Vector3 direction, out float distance)
+    {
+        RaycastHit hit;
+
+        // Cast a ray to detect boundary in the moving direction
+        if (Physics.Raycast(transform.position, direction, out hit, slowingDistance, boundaryLayer))
+        {
+            distance = hit.distance;
+            return true;
+        }
+
+        distance = Mathf.Infinity;
+        return false;
     }
 }
-
