@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Temple Reef 1.unity
+    path: Assets/Scenes/River Clean.unity
     guid: eb187e29fc0a0ed4cb8a5c35aa98bf86
   - enabled: 1
     path: Assets/Scenes/Coral Reef 1.unity
