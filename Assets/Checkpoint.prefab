@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 583624488234864902}
   - component: {fileID: 1620572838611201084}
   - component: {fileID: 6435879593776271657}
+  - component: {fileID: 7026105326244013503}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -118,3 +119,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65594b95a4c65b4ba38b4ca62474388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  fadeScript: {fileID: 0}
+--- !u!114 &7026105326244013503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253344555003600274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0c5f2fd899a494bb8b8ce3bafd9c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSources:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  player: {fileID: 0}
+  fadeDuration: 3
