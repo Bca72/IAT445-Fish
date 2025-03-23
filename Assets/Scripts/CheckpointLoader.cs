@@ -7,9 +7,6 @@ public class CheckpointLoader : MonoBehaviour
 {
     public GameObject player;
     public VRSceneFadeIn fadeScript; // Drag the black quad's script here
-    public GameObject audioGroup; // Drag your GameObject with 3 AudioSources
-    public float audioFadeDuration = 1.0f;
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,49 +15,16 @@ public class CheckpointLoader : MonoBehaviour
             StartCoroutine(FadeAndLoad());
         }
     }
-    private IEnumerator FadeOutAudio()
-    {
-        if (audioGroup == null) yield break;
-
-        AudioSource[] sources = audioGroup.GetComponents<AudioSource>();
-        float[] originalVolumes = new float[sources.Length];
-
-        for (int i = 0; i < sources.Length; i++)
-            originalVolumes[i] = sources[i].volume;
-
-        float t = 0f;
-        while (t < audioFadeDuration)
-        {
-            t += Time.deltaTime;
-            float fadeFactor = 1f - (t / audioFadeDuration);
-            for (int i = 0; i < sources.Length; i++)
-            {
-                if (sources[i] != null)
-                    sources[i].volume = originalVolumes[i] * fadeFactor;
-            }
-            yield return null;
-        }
-
-        // Ensure they’re fully silent
-        foreach (var source in sources)
-        {
-            if (source != null)
-                source.volume = 0f;
-        }
-    }
 
     private IEnumerator FadeAndLoad()
     {
-        if (fadeScript != null)
-            fadeScript.gameObject.SetActive(true);
+        // Activate the fade object if it's disabled
+        fadeScript.gameObject.SetActive(true);
 
-        // Start both fades at the same time
-        Coroutine fadeBlack = StartCoroutine(fadeScript.FadeToBlack());
-        Coroutine fadeAudio = StartCoroutine(FadeOutAudio());
+        // Start fading to black
+        yield return StartCoroutine(fadeScript.FadeToBlack());
 
-        yield return fadeBlack; // Wait for screen fade
-        yield return fadeAudio; // Optional: wait for audio fade if different timing
-
+        // Then load next scene
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 
@@ -73,6 +37,5 @@ public class CheckpointLoader : MonoBehaviour
             Debug.LogWarning("No more scenes in build settings!");
         }
     }
-
 }
 
