@@ -2042,6 +2042,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2404302231814620027, guid: b71cfdec4ce49444091747e3439217cf, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1806043932}
     - target: {fileID: 6307702264445295070, guid: b71cfdec4ce49444091747e3439217cf, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -4230,6 +4234,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02009fedc15396b40a1ee9bcf1a74207, type: 3}
+--- !u!82 &1806043932 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6044435986393844328, guid: 948e812a67d80a7489cbe094e6bf010a, type: 3}
+  m_PrefabInstance: {fileID: 1688319075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1852789768
 PrefabInstance:
   m_ObjectHideFlags: 0
