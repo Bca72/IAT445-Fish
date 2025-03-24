@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Kelp Caves.unity
+    guid: 730ffdc5a6bf99e4db4221e1f8b53ba4
+  - enabled: 1
     path: Assets/Scenes/River Clean.unity
     guid: eb187e29fc0a0ed4cb8a5c35aa98bf86
   - enabled: 1
