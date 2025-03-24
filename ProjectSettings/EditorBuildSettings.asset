@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/River Clean.unity
     guid: eb187e29fc0a0ed4cb8a5c35aa98bf86
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Coral Reef 1.unity
     guid: d44c91695c41e744d993f7db49d12b07
   - enabled: 1
