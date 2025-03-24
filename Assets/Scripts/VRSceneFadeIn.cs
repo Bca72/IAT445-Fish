@@ -9,6 +9,9 @@ public class VRSceneFadeIn : MonoBehaviour
     private Color startColor;
     [Range(0f, 1f)]public float fadeInPortion = 0.3f; // Portion of fadeDuration used to fade in
 
+    public AudioSource audioSource;
+    public AudioClip clipToPlayAfterFade;
+
 
     private void Awake()
     {
@@ -43,9 +46,17 @@ public class VRSceneFadeIn : MonoBehaviour
         color.a = 0f;
         rend.material.color = color;
 
+        // 🎵 Play audio after fade is done
+        if (audioSource != null && clipToPlayAfterFade != null)
+        {
+            audioSource.clip = clipToPlayAfterFade;
+            audioSource.Play();
+        }
+
         // Optional: disable the object after fade
         gameObject.SetActive(false);
     }
+
 
     public IEnumerator FadeToBlack()
     {
