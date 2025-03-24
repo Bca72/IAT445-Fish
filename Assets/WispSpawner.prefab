@@ -47,4 +47,4 @@ MonoBehaviour:
   wispPrefab: {fileID: 8973018746392277874, guid: 2d08622d3f670dd4e8c25c5c2b2c17ac, type: 3}
   player: {fileID: 0}
   checkpoint: {fileID: 0}
-  spawnInterval: 8
+  spawnInterval: 12

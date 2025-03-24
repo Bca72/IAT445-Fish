@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Coral Reef 1.unity
     guid: d44c91695c41e744d993f7db49d12b07
   - enabled: 1
+    path: Assets/Scenes/Drity Ocean.unity
+    guid: bef230c187048394d9aa84bacf913a58
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
