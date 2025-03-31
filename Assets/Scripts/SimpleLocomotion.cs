@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleLocomotion : MonoBehaviour
 {
     public float moveSpeed = 2.0f;
+    public float speedStep = 1.0f;
     public float minSpeed = 0.1f;
     public float slowingDistance = 2.0f;
     public float stopDistance = 0.05f;
@@ -13,8 +14,21 @@ public class SimpleLocomotion : MonoBehaviour
 
     private float currentSpeed;
 
+    
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Equals) || Input.GetKeyDown(KeyCode.KeypadPlus))
+    {
+        moveSpeed += speedStep;
+        Debug.Log("Speed Increased: " + moveSpeed);
+    }
+
+    if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.KeypadMinus))
+    {
+        moveSpeed = Mathf.Max(0f, moveSpeed - speedStep);
+        Debug.Log("Speed Decreased: " + moveSpeed);
+    }
         MovePlayer();
     }
 

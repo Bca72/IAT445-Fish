@@ -10,6 +10,7 @@ public class GuidingWisp : MonoBehaviour
     public float startDelay = 1f;
 
     private bool isMoving = false;
+    private Transform fishModel;
 
     private void Start()
     {
@@ -18,6 +19,10 @@ public class GuidingWisp : MonoBehaviour
             transform.position = player.position;
             Invoke(nameof(StartMoving), startDelay);
         }
+
+        // Get the fish child model (assuming it's the first child)
+        if (transform.childCount > 0)
+            fishModel = transform.GetChild(0);
     }
 
     void StartMoving()
@@ -35,11 +40,17 @@ public class GuidingWisp : MonoBehaviour
         if (distance > 0.5f)
         {
             transform.position += direction * speed * Time.deltaTime;
+
+            // 🐟 Rotate the fish child to face movement direction
+            if (fishModel != null && direction != Vector3.zero)
+            {
+                fishModel.rotation = Quaternion.LookRotation(direction, Vector3.up);
+            }
         }
         else
         {
-            // Optional: destroy or fade out at destination
             Destroy(gameObject, 2f);
         }
     }
 }
+
