@@ -25,7 +25,11 @@ namespace DistantLands
 
         void Awake()
         {
-            _originalPos = transform.position;
+            if (_originalPos == Vector3.zero)
+            {
+                _originalPos = transform.position; // Set this only if not set by SetInitialPosition
+            }
+
             _time = Random.Range(0, driftTimeRange.y);
             PickNewTarget();
         }
@@ -88,6 +92,13 @@ namespace DistantLands
             }
 
             _currentTargetPos = _nextTargetPos;
+        }
+
+        public void SetInitialPosition(Vector3 position)
+        {
+            transform.position = position;
+            _originalPos = position; // Ensure it starts floating from where it landed
+            _currentTargetPos = position; // Fix target position to prevent snapping
         }
     }
 }
