@@ -96,10 +96,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a808fd3c21394ea26641249be0a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropSpeed: 0.2
+  dropSpeed: 0.3
   bobHeight: 1
-  bobSpeed: 1
+  bobSpeed: 0.25
+  swayDistance: 1
+  swaySpeed: 0.25
   dropOffsetRange: 3
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  rotationSpeed: 5

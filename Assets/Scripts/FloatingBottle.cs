@@ -25,6 +25,20 @@ public class FloatingBottle : MonoBehaviour
     private Quaternion _nextRotation;
 
     private bool initialized = false;
+    void Start()
+{
+    if (!initialized)
+    {
+        _originalPos = transform.position;
+        _currentTargetPos = transform.position;
+        _currentRotation = transform.rotation;
+        initialized = true;
+
+        _time = Random.Range(0, driftTimeRange.y);
+        PickNewTarget();
+    }
+}
+
 
     void OnEnable()
     {
