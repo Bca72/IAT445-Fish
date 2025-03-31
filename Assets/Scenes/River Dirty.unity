@@ -29751,8 +29751,8 @@ MonoBehaviour:
   player: {fileID: 865623446}
   ceiling: {fileID: 334523074}
   spawnRadius: 50
-  maxTrashCount: 400
-  spawnInterval: 0.5
+  maxTrashCount: 200
+  spawnInterval: 1.5
 --- !u!4 &1996836082
 Transform:
   m_ObjectHideFlags: 0
