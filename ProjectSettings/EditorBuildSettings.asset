@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/River Dirty.unity
     guid: e89134cd021ec2c4491eb641d60f3447
   - enabled: 1
-    path: Assets/Scenes/End Screen.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/River Dry.unity
+    guid: 01c363d0324fdfa4894bd3de4d1923ef
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6012a4e0f963e7241a1fecb988acd652, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2edc49f725214c14ba18666708864ffa, type: 2}
