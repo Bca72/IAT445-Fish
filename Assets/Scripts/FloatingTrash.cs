@@ -23,6 +23,19 @@ public class FloatingTrash : MonoBehaviour
 
     private bool initialized = false;
 
+    void Start()
+{
+    if (!initialized)
+    {
+        _originalPos = transform.position;
+        _currentTargetPos = transform.position;
+        initialized = true;
+
+        _time = Random.Range(0, driftTimeRange.y);
+        PickNewTarget();
+    }
+}
+
     void OnEnable()
     {
         if (!initialized) return;

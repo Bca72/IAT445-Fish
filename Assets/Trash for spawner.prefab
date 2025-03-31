@@ -99,6 +99,9 @@ MonoBehaviour:
   dropSpeed: 0.2
   bobHeight: 1
   bobSpeed: 1
+  swayDistance: 1
+  swaySpeed: 1
+  rotationSpeed: 10
   dropOffsetRange: 3
   groundMask:
     serializedVersion: 2
