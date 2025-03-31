@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeDuration: 3
   fadeInPortion: 0.5
+  audioSource: {fileID: 0}
 --- !u!1 &4636546618417948640
 GameObject:
   m_ObjectHideFlags: 0
