@@ -17836,14 +17836,14 @@ GameObject:
   - component: {fileID: 1624988970}
   - component: {fileID: 1624988969}
   - component: {fileID: 1624988968}
-  - component: {fileID: 1624988967}
+  - component: {fileID: 1624988971}
   m_Layer: 0
   m_Name: Fade (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1624988966
 Transform:
   m_ObjectHideFlags: 0
@@ -17859,21 +17859,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 109443604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1624988967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624988965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8aa8cd15989f06418ab90db7ba3c124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 3
-  fadeInPortion: 0.5
-  audioSource: {fileID: 1688319076}
 --- !u!64 &1624988968
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17946,6 +17931,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624988965}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1624988971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624988965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc0f8afa479d9144a2d58796b644860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 3
 --- !u!1 &1626468529
 GameObject:
   m_ObjectHideFlags: 0
@@ -18834,6 +18832,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6843009160552232294, guid: d5cd845de5e81f847b5a29267132626e, type: 3}
   m_PrefabInstance: {fileID: 1575995913}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1709089119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1709089121}
+  - component: {fileID: 1709089120}
+  m_Layer: 0
+  m_Name: LAST SCENE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1709089120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709089119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853f6e330e4357c478e904549542c73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeScript: {fileID: 1624988971}
+  audioSourcesToFade:
+  - {fileID: 1665010790}
+  - {fileID: 150440966}
+  - {fileID: 1428650067}
+  fadeDelay: 40
+  fadeDuration: 5
+--- !u!4 &1709089121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709089119}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -549.40076, y: -214.11807, z: -113.678345}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1716624340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23499,3 +23548,4 @@ SceneRoots:
   - {fileID: 906109562}
   - {fileID: 2119665552}
   - {fileID: 1673701796}
+  - {fileID: 1709089121}
