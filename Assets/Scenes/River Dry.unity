@@ -17944,6 +17944,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 3
+  audioSourcesToFade:
+  - {fileID: 1665010790}
+  - {fileID: 150440966}
+  - {fileID: 1428650067}
 --- !u!1 &1626468529
 GameObject:
   m_ObjectHideFlags: 0
@@ -18862,12 +18866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeScript: {fileID: 1624988971}
-  audioSourcesToFade:
-  - {fileID: 1665010790}
-  - {fileID: 150440966}
-  - {fileID: 1428650067}
   fadeDelay: 40
-  fadeDuration: 5
 --- !u!4 &1709089121
 Transform:
   m_ObjectHideFlags: 0
