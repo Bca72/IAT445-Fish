@@ -29679,9 +29679,9 @@ MonoBehaviour:
   - {fileID: 6670104962531569288, guid: b6f14e5d4f212ba4a82041d40ff02147, type: 3}
   - {fileID: 6846224476204096579, guid: b68c8d3effc0873498310d6786d93661, type: 3}
   player: {fileID: 865623446}
-  ceiling: {fileID: 770588420}
+  ceiling: {fileID: 334523074}
   spawnRadius: 50
-  maxTrashCount: 100
+  maxTrashCount: 400
   spawnInterval: 0.5
 --- !u!4 &1996836082
 Transform:
