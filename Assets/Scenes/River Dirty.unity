@@ -9972,7 +9972,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: d21b1620518511548b80933f31c87b35, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 6cbc466961b701f40b3931da573fb111, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &678912766
 Terrain:
@@ -10039,6 +10039,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 712487307772966710, guid: b71cfdec4ce49444091747e3439217cf, type: 3}
       propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 712487307772966710, guid: b71cfdec4ce49444091747e3439217cf, type: 3}
+      propertyPath: slowingDistance
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2404302231814620027, guid: b71cfdec4ce49444091747e3439217cf, type: 3}
